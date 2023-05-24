@@ -39,4 +39,6 @@
     <string name="fasilitas_umum">Fasilitas Umum</string>
     <string name="bulan">Bulan</string>
     <string name="harga_kos">Harga Kos</string>
+    <string name="jumlah_kamar">Jumlah Kamar</string>
+    <string name="_1000000">1000000</string>
 </resources>
