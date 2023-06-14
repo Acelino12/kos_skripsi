@@ -13,14 +13,14 @@ public class tambah_class extends AppCompatActivity {
 
     EditText namakos, jumlahkamar, hargakos, nohp,alamat,jarak,fasilitas,jeniskamar;
     Button simpan ;
-    sqlite_tambah sqlite_tambah;
+    sqlite_tambah dbhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tambah_main);
 
-        sqlite_tambah = new sqlite_tambah(this);
+        dbhelper = new sqlite_tambah(this);
         namakos = (EditText) findViewById(R.id.namakos);
         alamat = (EditText) findViewById(R.id.alamatkos);
         jeniskamar = (EditText) findViewById(R.id.jeniskamar);
@@ -34,7 +34,7 @@ public class tambah_class extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SQLiteDatabase db = sqlite_tambah.getWritableDatabase();
+                SQLiteDatabase db = dbhelper.getWritableDatabase();
                 db.execSQL("insert into datakos(namakos, alamat, jumlahkamar, jeniskamar,fasilitas, nohp, jarak, hargakos) values('" +
                         namakos.getText().toString() + "','" +
                         alamat.getText().toString() + "','" +
