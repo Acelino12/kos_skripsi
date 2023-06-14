@@ -27,7 +27,7 @@ public class sqlite_tambah extends SQLiteOpenHelper {
         Log.d("data","onCreate: " + sql );
         db.execSQL(sql);
         sql = "INSERT INTO datakos(nama,alamat,jumlahkamar,jk,fasilitas,hp,jarak,harga)" +
-                "VALUES('BAMBANG','jl. panarukan','5','pria','meja,kursi,lemari','082567651122','200','500000');";
+                "VALUES('Kos BAMBANG','jl. panarukan','5','pria','meja,kursi,lemari','082567651122','200','1000000');";
         db.execSQL(sql);
     }
 
