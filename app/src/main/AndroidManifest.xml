@@ -12,22 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kos"
         tools:targetApi="31">
-
+        <activity
+            android:name=".waktu_class"
+            android:exported="false" />
+        <activity
+            android:name=".lihat_kos_ubm_class"
+            android:exported="false" />
+        <activity
+            android:name=".update_kos_class"
+            android:exported="false" />
+        <activity
+            android:name=".lihat_kos_class"
+            android:exported="false" />
         <activity
             android:name=".awal_class"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".login_class"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".register_class"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".home_class"
             android:exported="true">
@@ -39,39 +44,28 @@
         </activity>
         <activity
             android:name=".tambah_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".sewa_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".disewakan_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".ubm_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".ui_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
+        <activity
+            android:name=".detailkosui"
+            android:exported="true" />
         <activity
             android:name=".ipb_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".ugm_class"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>

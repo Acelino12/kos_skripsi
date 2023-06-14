@@ -35,12 +35,12 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="10dp"
-                    android:background="@color/black"/>
+                    android:background="@drawable/personal"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/username"
+                    android:text="Selamat Datang"
                     android:textSize="20sp"/>
 
             </LinearLayout>
@@ -76,7 +76,7 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@color/black"
+                                android:background="@drawable/tambah_data"
                                 android:contentDescription="@string/todo" />
 
                             <TextView
@@ -105,7 +105,7 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@color/black"
+                                android:background="@drawable/sewa"
                                 android:contentDescription="@string/todo" />
 
                             <TextView
@@ -134,7 +134,7 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@color/black"
+                                android:background="@drawable/logo_disewakan"
                                 android:contentDescription="@string/todo" />
 
                             <TextView

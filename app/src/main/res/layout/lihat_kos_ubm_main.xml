@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".tambah_class">
+    tools:context=".lihat_kos_ubm_class"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Tambah Kos"
+                    android:text="Fasilitas Kos"
                     android:textSize="40sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"/>
@@ -36,15 +37,36 @@
             </LinearLayout>
 
             <!-- nama kos -->
-            <EditText
-                android:id="@+id/namakos"
-                android:layout_width="400dp"
-                android:maxWidth="200dp"
-                android:layout_height="48dp"
-                android:hint="@string/nama_kos"
-                android:autofillHints=""
-                android:inputType="text"
-                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="@drawable/tambah_background"
+                android:elevation="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:text="@string/nama_kos"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tampilnamakosubm"
+                    android:layout_width="400dp"
+                    android:maxWidth="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nama_kos"
+                    android:textSize="25sp"
+                    android:autofillHints=""
+                    android:inputType="text"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
 
             <!-- jenis kamar -->
             <LinearLayout
@@ -64,13 +86,13 @@
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/jeniskamar"
+                <TextView
+                    android:id="@+id/tampiljeniskamarubm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/todo"
                     android:hint="(pria/wanita/campuran)"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
 
 
@@ -99,14 +121,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/jumlahkamar"
+                    <TextView
+                        android:id="@+id/tampiljumlahkamarubm"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:hint="5"
+                        android:textSize="20sp"
                         android:layout_marginStart="5dp"
                         android:gravity="center"
-                        android:background="@drawable/text_tambah"
                         android:autofillHints=""
                         android:inputType="number" />
 
@@ -139,13 +161,13 @@
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/fasilitaskamar"
+                <TextView
+                    android:id="@+id/tampilfasilitaskamarubm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/todo"
                     android:hint="(meja,lemari,bantal)"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
@@ -179,14 +201,14 @@
                         android:layout_marginStart="5dp"
                         android:text="Rp"/>
 
-                    <EditText
-                        android:id="@+id/hargakos"
+                    <TextView
+                        android:id="@+id/tampilhargakosubm"
                         android:layout_width="100dp"
                         android:layout_height="48dp"
+                        android:textSize="20sp"
                         android:hint="@string/_1000000"
                         android:layout_marginStart="5dp"
                         android:gravity="center"
-                        android:background="@drawable/text_tambah"
                         android:autofillHints=""
                         android:inputType="number" />
 
@@ -219,12 +241,12 @@
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/alamatkos"
+                <TextView
+                    android:id="@+id/tampilalamatkosubm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="jl. jeruk, Ancol, Jakarta Utara"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
@@ -253,14 +275,14 @@
                     android:layout_marginStart="10dp"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/jarakkos"
+                    <TextView
+                        android:id="@+id/tampiljarakkosubm"
                         android:layout_width="100dp"
                         android:layout_height="48dp"
                         android:hint="@string/_1000000"
                         android:layout_marginStart="5dp"
                         android:gravity="center"
-                        android:background="@drawable/text_tambah"
+                        android:textSize="20sp"
                         android:autofillHints=""
                         android:inputType="number" />
 
@@ -273,12 +295,6 @@
 
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Chack jarak"
-                    android:layout_gravity="center"/>
-
             </LinearLayout>
 
             <!-- no hp -->
@@ -286,9 +302,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="5dp"
-                >
+                android:background="@drawable/tambah_background"
+                android:elevation="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -298,37 +315,41 @@
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/nohp"
-                    android:layout_width="150dp"
+                <TextView
+                    android:id="@+id/tampilnohpubm"
+                    android:layout_width="160dp"
                     android:layout_height="48dp"
                     android:hint="085267672121"
                     android:layout_marginStart="5dp"
                     android:gravity="center"
-                    android:background="@drawable/text_tambah"
                     android:autofillHints=""
+                    android:textSize="20sp"
                     android:inputType="number" />
 
             </LinearLayout>
 
-            <!-- button tambah -->
+            <!-- Button -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp">
+                android:layout_marginTop="10dp">
 
                 <Button
-                    android:id="@+id/btn_simpan"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tambah"/>
+                    android:text="Telfon"
+                    android:id="@+id/telfon"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sewa"
+                    android:id="@+id/sewakos"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

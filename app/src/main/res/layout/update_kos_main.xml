@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Tambah Kos"
+                    android:text="Update Kos"
                     android:textSize="40sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"/>
@@ -37,7 +37,7 @@
 
             <!-- nama kos -->
             <EditText
-                android:id="@+id/namakos"
+                android:id="@+id/updatenamakos"
                 android:layout_width="400dp"
                 android:maxWidth="200dp"
                 android:layout_height="48dp"
@@ -65,14 +65,13 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/jeniskamar"
+                    android:id="@+id/updatejeniskamar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/todo"
                     android:hint="(pria/wanita/campuran)"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
-
 
             </LinearLayout>
 
@@ -100,7 +99,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/jumlahkamar"
+                        android:id="@+id/updatejumlahkamar"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:hint="5"
@@ -140,7 +139,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/fasilitaskamar"
+                    android:id="@+id/updatefasilitaskamar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/todo"
@@ -180,7 +179,7 @@
                         android:text="Rp"/>
 
                     <EditText
-                        android:id="@+id/hargakos"
+                        android:id="@+id/updatehargakos"
                         android:layout_width="100dp"
                         android:layout_height="48dp"
                         android:hint="@string/_1000000"
@@ -220,7 +219,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/alamatkos"
+                    android:id="@+id/updatealamatkos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="jl. jeruk, Ancol, Jakarta Utara"
@@ -254,7 +253,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/jarakkos"
+                        android:id="@+id/updatejarakkos"
                         android:layout_width="100dp"
                         android:layout_height="48dp"
                         android:hint="@string/_1000000"
@@ -274,6 +273,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_chackjarak"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Chack jarak"
@@ -299,7 +299,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/nohp"
+                    android:id="@+id/updatenohp"
                     android:layout_width="150dp"
                     android:layout_height="48dp"
                     android:hint="085267672121"
@@ -311,7 +311,7 @@
 
             </LinearLayout>
 
-            <!-- button tambah -->
+            <!-- button update -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -321,7 +321,7 @@
                 android:layout_marginBottom="30dp">
 
                 <Button
-                    android:id="@+id/btn_simpan"
+                    android:id="@+id/btn_update"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Tambah"/>
