@@ -42,13 +42,13 @@ public class register_class extends AppCompatActivity {
 
                     if (!db.isEmailExists(Email)) {
                         db.addUser(new user(null, UserName, Email, Password));
-                        Snackbar.make(btn_register, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(btn_register, "successfully!", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(this::finish, Snackbar.LENGTH_LONG);
                         Intent intent = new Intent(register_class.this, login_class.class);
                         startActivity(intent);
                     }
                     else {
-                        Snackbar.make(btn_register, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(btn_register, "Email sudah ada ", Snackbar.LENGTH_LONG).show();
                     }
                 }
 
@@ -73,7 +73,7 @@ public class register_class extends AppCompatActivity {
 
         if (UserName.isEmpty()) {
             valid = false;
-            Toast.makeText(getApplication(), "Please enter valid username!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplication(), "masukan username!", Toast.LENGTH_LONG).show();
         }
         else {
             if (UserName.length() > 4) {
@@ -82,12 +82,12 @@ public class register_class extends AppCompatActivity {
                 }
                 else {
                     valid = false;
-                    Toast.makeText(getApplication(), "Username is too long!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplication(), "Username terlalu panjang", Toast.LENGTH_LONG).show();
                 }
             }
             else {
                 valid = false;
-                Toast.makeText(getApplication(), "Username is too short!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(), "Username terlalu kecil", Toast.LENGTH_LONG).show();
             }
         }
 
@@ -101,7 +101,7 @@ public class register_class extends AppCompatActivity {
 
         if (Password.isEmpty()) {
             valid = false;
-            Toast.makeText(getApplication(), "Please enter Password!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplication(), "masukan Password", Toast.LENGTH_LONG).show();
         }
         else {
             if (Password.length() > 5) {
@@ -109,17 +109,17 @@ public class register_class extends AppCompatActivity {
             }
             else {
                 valid = false;
-                Toast.makeText(getApplication(), "Password is too short!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(), "Password pendek", Toast.LENGTH_LONG).show();
             }
         }
 
         if (Password2.isEmpty()) {
             valid = false;
-            Toast.makeText(getApplication(), "Please enter Confirm Password!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplication(), "masuka Confirm Password!", Toast.LENGTH_LONG).show();
         }
         else {
             if(!Password.equals(Password2)){
-                Toast.makeText(register_class.this,"Password Not matching",Toast.LENGTH_SHORT).show();
+                Toast.makeText(register_class.this,"Password tidak sama",Toast.LENGTH_SHORT).show();
                 valid=false;
             }
             else {
