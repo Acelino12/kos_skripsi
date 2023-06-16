@@ -2,6 +2,7 @@ package com.example.kos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ public class update_kos_class extends AppCompatActivity {
 
     protected Cursor cursor;
     sqlite_tambah dbhelper;
-    Button update;
+    Button update,chackjarak;
     EditText nama,alamat,jumlahkamar,fasilitas,jarak,harga,hp,jk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,5 +70,15 @@ public class update_kos_class extends AppCompatActivity {
                 finish();
             }
         });
+
+        chackjarak = findViewById(R.id.btn_chackjarak);
+        chackjarak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent secondActivity = new Intent(update_kos_class.this, chack_Jarak_class.class);
+                startActivity(secondActivity);
+            }
+        });
+
     }
 }

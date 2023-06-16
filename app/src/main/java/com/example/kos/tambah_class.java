@@ -1,5 +1,6 @@
 package com.example.kos;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -52,7 +53,8 @@ public class tambah_class extends AppCompatActivity {
         chackjarak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "berhasil", Toast.LENGTH_SHORT).show();
+                Intent secondActivity = new Intent(tambah_class.this, chack_Jarak_class.class);
+                startActivity(secondActivity);
             }
         });
     }

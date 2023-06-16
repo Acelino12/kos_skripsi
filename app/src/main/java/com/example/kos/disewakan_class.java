@@ -48,7 +48,7 @@ public class disewakan_class extends AppCompatActivity {
         ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
                 final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
-                final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
+                final CharSequence[] dialogitem = {"Lihat Kos", "Update Kos", "Hapus Kos"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(disewakan_class.this);
                 builder.setTitle("Pilihan");
                 builder.setItems(dialogitem, new DialogInterface.OnClickListener() {

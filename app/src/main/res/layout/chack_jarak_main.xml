@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context=".chack_Jarak_class"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        map:cameraZoom="15" />
+
+    <Button
+        android:id="@+id/buttonCalculateDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Jarak" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jarak terpendek:"
+        android:textSize="20sp"
+        android:id="@+id/textViewDistance"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#ED0101"
+        android:text="*1 Km = 1000 Meter"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#ED0101"
+        android:text="*0,5 Km = 500 Meter"/>
+
+</LinearLayout>

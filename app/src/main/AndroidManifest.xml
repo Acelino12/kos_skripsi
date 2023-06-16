@@ -14,6 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kos"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDVmYx5AVPMFf7gAjhNBP27IhSLgB8kzpE" />
+
+        <activity
+            android:name=".chack_Jarak_class"
+            android:exported="false" />
         <activity
             android:name=".waktu_class"
             android:exported="false" />
@@ -28,14 +36,13 @@
             android:exported="false" />
         <activity
             android:name=".awal_class"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".login_class"
             android:exported="true" />
@@ -44,8 +51,7 @@
             android:exported="true" />
         <activity
             android:name=".home_class"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".tambah_class"
             android:exported="true" />
