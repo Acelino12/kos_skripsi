@@ -68,7 +68,6 @@
                     android:id="@+id/updatejeniskamar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
                     android:hint="(pria/wanita/campuran)"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -142,7 +141,6 @@
                     android:id="@+id/updatefasilitaskamar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
                     android:hint="(meja,lemari,bantal)"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -324,7 +322,7 @@
                     android:id="@+id/btn_update"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Tambah"/>
+                    android:text="Save"/>
             </LinearLayout>
 
         </LinearLayout>

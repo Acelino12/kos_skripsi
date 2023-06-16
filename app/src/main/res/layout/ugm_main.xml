@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/daerah_ubm"/>
+        android:background="@drawable/daerah_ugm"/>
 
     <TextView
         android:layout_width="match_parent"

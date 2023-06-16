@@ -28,7 +28,14 @@
             android:exported="false" />
         <activity
             android:name=".awal_class"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".login_class"
             android:exported="true" />
@@ -38,11 +45,6 @@
         <activity
             android:name=".home_class"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".tambah_class"

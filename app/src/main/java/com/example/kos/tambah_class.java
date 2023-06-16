@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class tambah_class extends AppCompatActivity {
 
-    EditText namakos, jumlahkamar, hargakos, nohp,alamat,jarak,fasilitas,jeniskamar;
-    Button simpan ;
+    EditText nama,alamat,jumlahkamar,fasilitas,jarak,harga,hp,jk;
+    Button simpan , chackjarak;
     sqlite_tambah dbhelper;
 
     @Override
@@ -21,29 +21,37 @@ public class tambah_class extends AppCompatActivity {
         setContentView(R.layout.tambah_main);
 
         dbhelper = new sqlite_tambah(this);
-        namakos = (EditText) findViewById(R.id.namakos);
+        nama = (EditText) findViewById(R.id.namakos);
         alamat = (EditText) findViewById(R.id.alamatkos);
-        jeniskamar = (EditText) findViewById(R.id.jeniskamar);
-        nohp = (EditText) findViewById(R.id.nohp);
+        jk = (EditText) findViewById(R.id.jeniskamar);
+        hp = (EditText) findViewById(R.id.nohp);
         jumlahkamar = (EditText) findViewById(R.id.jumlahkamar);
         fasilitas = (EditText) findViewById(R.id.fasilitaskamar);
         jarak = (EditText) findViewById(R.id.jarakkos);
-        hargakos = (EditText) findViewById(R.id.hargakos);
+        harga = (EditText) findViewById(R.id.hargakos);
 
         simpan = findViewById(R.id.btn_simpan);
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = dbhelper.getWritableDatabase();
-                db.execSQL("insert into datakos(namakos, alamat, jumlahkamar, jeniskamar,fasilitas, nohp, jarak, hargakos) values('" +
-                        namakos.getText().toString() + "','" +
+                db.execSQL("insert into datakos(nama, alamat, jumlahkamar, jk,fasilitas, hp, jarak, harga) values('" +
+                        nama.getText().toString() + "','" +
                         alamat.getText().toString() + "','" +
                         jumlahkamar.getText().toString() + "','" +
-                        jeniskamar.getText().toString() + "','" +
+                        jk.getText().toString() + "','" +
                         fasilitas.getText().toString() + "','" +
-                        nohp.getText().toString() + "','" +
+                        hp.getText().toString() + "','" +
                         jarak.getText().toString() + "','" +
-                        hargakos.getText().toString() + "')");
+                        harga.getText().toString() + "')");
+                Toast.makeText(getApplicationContext(), "berhasil", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        chackjarak = findViewById(R.id.chackjarak);
+        chackjarak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "berhasil", Toast.LENGTH_SHORT).show();
             }
         });
